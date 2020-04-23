@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Aug 30 09:28:40 2018
+Version: 20181203
 
 @author: 20304269
 """
