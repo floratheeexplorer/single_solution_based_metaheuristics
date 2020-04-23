@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Tue Aug 28 13:24:32 2018
+Version: 20181203
 
 @author: 20304269
 """
@@ -52,7 +53,7 @@ alpha = 0.9 #temperature decreasing factor
 accepted_max = 12 #max counter for accepted solutions
 count_max = 3 #max counter for temperature stages without any acceptance
 
-##Simulated annealing algorithm with cooling after a number of accepted perturbations:
+##Simulated annealing algorithm with cooling after a number of accepted perturbations##
     #Inspiration - K. E. Geltman: http://katrinaeg.com/simulated-annealing.html
 def anneal(sol, T_initial, T_min, alpha, accepted_max, count_max):
     solution = copy.deepcopy(sol)
