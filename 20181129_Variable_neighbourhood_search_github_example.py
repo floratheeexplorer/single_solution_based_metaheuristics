@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Sep 14 15:53:48 2018
+Version: 20181129
 
 @author: 20304269
 """
@@ -17,6 +18,7 @@ df.columns = df.columns.astype(int)
 o = df.columns.tolist() 
 
 ##INTIALISE
+#initial solution
 initial_solution = [131,107,102,134,135,136,137,138,139,140,141,142]
 #parameters
 count_max = 10 #termination criterion
@@ -124,7 +126,7 @@ def local_search(solu):
     
     return best
 
-#Algotithm: Variable neighbourhood search
+##Variable neighbourhood search##
 def variable_neighbourhood_search(initial_solution, count_max, k_max):           
     
     count = 0    
