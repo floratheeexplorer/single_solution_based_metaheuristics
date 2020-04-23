@@ -41,7 +41,7 @@ def neighbour(sol):
 par = 2 #rain speed
 count_max = 5 #termination criterion if no improvements
     
-##Great deluge
+##Great deluge##
     #INSPIRATION: My friend Charl!    
 def greatdeluge(sol, par, count_max):
 
