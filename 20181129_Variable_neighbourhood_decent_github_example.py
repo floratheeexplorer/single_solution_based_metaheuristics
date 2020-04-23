@@ -2,6 +2,7 @@
 """
 @author: 20304269
 Created on Fri Sep 14 15:53:48 2018
+Version: 20181129
 
 """
 
@@ -15,7 +16,7 @@ df = pd.read_csv('small_example_extended.csv', index_col=0, header=0)
 df.columns = df.columns.astype(int)
 
 ##INTIALISE
-#initial_solution = [131,107,102,134,135,136,137,138,139,140,141,142]
+#initial solution
 initial_solution = [107, 137, 138, 102, 135, 139, 136, 131, 141, 140, 142, 134]
 #parameters
 count_max = 10 #termination criterion
@@ -118,7 +119,7 @@ def local_search(solu):
     
     return best
 
-#Algorithm
+##Variable neighbourhood descent##
 def variable_neighbourhood_descent(initial_solution, count_max, k_max):          
     
     count = 0       
