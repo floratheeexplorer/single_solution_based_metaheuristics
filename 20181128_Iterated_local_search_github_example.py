@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Sep 14 15:53:48 2018
+Version: 20181128
 
 @author: 20304269
 """
@@ -35,7 +36,7 @@ def cost(solu):
 
 #Local search with two_opt swap (alternatives: insertion neighborhood) [component 2]
     #INSPIRATION - P. Diniz: http://pedrohfsd.com/2017/08/09/2opt-part1.html
-    #!REQUIREMENTS! - same start and end element (TSP)
+    #!REQUIREMENTS! - same start and stop element (TSP)
 def local_search(solu): 
     solu = solu + [solu[0]]
     best = solu
@@ -86,7 +87,7 @@ def generate_restart_solution(o):
     restart_solution = random.sample(o, len(o)) 
     return restart_solution
 
-#Iterated local search algorithm     
+##Iterated local search algorithm##     
 def iterated_local_search(initial_solution, count_max, not_accepted_max):
     
     count = 0
@@ -115,7 +116,8 @@ def iterated_local_search(initial_solution, count_max, not_accepted_max):
             not_accepted = best_solu[1]            
             count += 1
     
-        else: #Step 6b: Search history - Restart search if a number of iterations no improved solution is found
+        #Step 6b: Search history - Restart search if a number of iterations no improved solution is found
+        else: 
             restart = generate_restart_solution(o)
             solution = local_search(restart)
             not_accepted = 0
